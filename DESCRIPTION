@@ -1,0 +1,27 @@
+Package: CHIP
+Type: Package
+Title: Subsampling with One-Step Correction for Large-Scale Generalized Linear Models
+Version: 0.1.0
+Authors@R: c(
+    person("Jie", "Hu", role = "aut"),
+    person("Jianmin", "Chen", role = "aut"),
+    person("Bingyu", "Zhang", email = "bingyuz7@sas.upenn.edu", role = c("aut", "cre")),
+    person("Yong", "Chen", email = "ychen123@upenn.edu", role = "aut"))
+Description: Fits linear, logistic and Poisson regression on very large data
+    by estimating on an informative subsample and then applying a one-step
+    Newton correction that uses the rest of the data. Supports uniform and
+    optimal (A- or L-optimal) subsampling probabilities, and adaptive-lasso
+    variable screening for high-dimensional covariates. Returns coefficients,
+    sandwich standard errors and each individual's sampling probability and
+    inverse-probability weight.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Depends: R (>= 4.1.0)
+Imports:
+    glmnet,
+    mvtnorm,
+    stats
+Suggests:
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+RoxygenNote: 7.3.1
